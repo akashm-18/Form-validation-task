@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom'
 const DisplayData = () => {
     const location = useLocation()
     const {name, email, password} = location.state || {}
+    
   return (
     <div className='w-full min-h-screen flex items-center justify-center bg-gray-100'>
     <div className='p-6 bg-white rounded shadow-md'>
