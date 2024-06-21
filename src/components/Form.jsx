@@ -13,7 +13,7 @@ const Form = () => {
     const validate = () => {
         const errors = {}
 
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const validEmailReference = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if(!name) {
             errors.name = "Name need to be Filled"
@@ -21,7 +21,7 @@ const Form = () => {
 
         if(!email) {
             errors.email = "Email need to be Filled"
-        } else if (!(regex.test(email))) {
+        } else if (!(validEmailReference.test(email))) {
             errors.email = "Enter valid email Address"
         }
 
@@ -48,7 +48,7 @@ const Form = () => {
     }
 
   return (
-    <div className='w-full min-h-screen'>
+    <div className='w-full min-h-screen flex items-center justify-center'>
       <form onSubmit={handleSubmit} className='flex flex-col items-center justify-center gap-5'>
       <div className='flex flex-col'>
           <input
